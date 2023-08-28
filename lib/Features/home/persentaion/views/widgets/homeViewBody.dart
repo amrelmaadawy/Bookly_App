@@ -3,7 +3,6 @@ import 'BestSellerListView.dart';
 import 'customAppBar.dart';
 import 'listViewBuilder.dart';
 
-
 class home_View_Body extends StatelessWidget {
   const home_View_Body({Key? key}) : super(key: key);
 
@@ -38,7 +37,6 @@ class home_View_Body extends StatelessWidget {
     );
   }
 }
-
 
 // import 'package:flutter/material.dart';
 // import 'bestSellerListViewItem.dart';

@@ -1,5 +1,6 @@
 import 'package:bookly_app/Features/home/persentaion/views/widgets/customBookItemListView.dart';
 import 'package:flutter/material.dart';
+
 class similarDetailesListView extends StatelessWidget {
   const similarDetailesListView({super.key});
 

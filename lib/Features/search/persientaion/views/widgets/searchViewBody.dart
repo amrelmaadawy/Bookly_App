@@ -12,9 +12,10 @@ class searchVeiwBody extends StatelessWidget {
       child: SizedBox(
         height: 720,
         child: Column(
-          children: [customSearchField(),
-          Expanded(child: searchResultView())
-          // watch out !!! error in scroll 
+          children: [
+            customSearchField(),
+            Expanded(child: searchResultView())
+            // watch out !!! error in scroll
           ],
         ),
       ),

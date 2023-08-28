@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class customBookDetailesViewAppBar extends StatelessWidget {
@@ -8,9 +7,9 @@ class customBookDetailesViewAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(onPressed: (){}, icon:const  Icon(Icons.close)),
-       const Spacer(),
-        IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart))
+        IconButton(onPressed: () {}, icon: const Icon(Icons.close)),
+        const Spacer(),
+        IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_cart))
       ],
     );
   }

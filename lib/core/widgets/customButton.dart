@@ -21,11 +21,12 @@ class customButton extends StatelessWidget {
         onPressed: () {},
         style: TextButton.styleFrom(
           shape: RoundedRectangleBorder(borderRadius: borderRadius),
-          backgroundColor:backGroundColor,
+          backgroundColor: backGroundColor,
         ),
         child: Text(
           text,
-          style: TextStyle(color:TextColor,fontSize: 18,fontWeight: FontWeight.bold),
+          style: TextStyle(
+              color: TextColor, fontSize: 18, fontWeight: FontWeight.bold),
         ),
       ),
     );

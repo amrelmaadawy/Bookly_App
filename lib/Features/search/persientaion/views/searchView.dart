@@ -10,7 +10,7 @@ class searchView extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-        searchVeiwBody(),
+            searchVeiwBody(),
           ],
         ),
       ),
