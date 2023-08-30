@@ -1,10 +1,8 @@
 import 'package:dio/dio.dart';
-
 abstract class failure {
   final String errmessage;
   failure(this.errmessage);
 }
-
 class serverFailure extends failure {
   serverFailure(super.errmessage);
   factory serverFailure.fromDioError(DioError dioError) {
@@ -35,7 +33,6 @@ class serverFailure extends failure {
         return serverFailure('Opps There was an Error, Please try again');
     }
   }
-
   factory serverFailure.fromRespones(int statusCode, dynamic respones) {
     if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
       return serverFailure(respones['error']['message']);
