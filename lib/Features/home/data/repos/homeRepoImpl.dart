@@ -5,7 +5,7 @@ import 'package:bookly_app/core/utils/apiService.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-class homeRepoImpl implements homeRepo {
+class homeRepoImpl implements HomeRepo {
   final ApiService apiService;
   homeRepoImpl(this.apiService);
   @override
