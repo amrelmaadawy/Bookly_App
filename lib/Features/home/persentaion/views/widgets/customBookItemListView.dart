@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import 'package:bookly_app/core/utils/assets.dart';
 
 class customItemListView extends StatelessWidget {
-  const customItemListView({Key? key}) : super(key: key);
-
+  const customItemListView({Key? key, required this.imageUrl})
+      : super(key: key);
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -11,8 +11,8 @@ class customItemListView extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          image: const DecorationImage(
-              image: AssetImage(assets.testPic), fit: BoxFit.fill),
+          image:  DecorationImage(
+              image: NetworkImage(imageUrl), fit: BoxFit.fill),
         ),
       ),
     );

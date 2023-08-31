@@ -13,10 +13,10 @@ class LoadingNewsetBooks extends NewsetBooksState {}
 
 class FailureNewsetBooks extends NewsetBooksState {
   final String errmasge;
- const FailureNewsetBooks(this.errmasge);
+  const FailureNewsetBooks(this.errmasge);
 }
 
 class SuccessNewsetBooks extends NewsetBooksState {
-final  List<BookModle> books;
- const SuccessNewsetBooks(this.books);
+  final List<BookModle> books;
+  const SuccessNewsetBooks(this.books);
 }

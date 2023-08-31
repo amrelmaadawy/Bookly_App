@@ -19,7 +19,10 @@ class detailesVeiwBody extends StatelessWidget {
           const customBookDetailesViewAppBar(),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * .17),
-            child: const customItemListView(),
+            child: const customItemListView(
+              imageUrl:
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7x42tmAKex3xSGmmajDgLr1KfDMwP3fNwRsuoQ-yn&s',
+            ),
           ),
           const SizedBox(
             height: 43,

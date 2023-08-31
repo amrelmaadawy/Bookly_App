@@ -3,8 +3,8 @@ import 'package:bookly_app/core/utils/apiService.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
-final get_it = GetIt.instance;
+final getIt = GetIt.instance;
 void setup() {
-  get_it.registerSingleton<homeRepoImpl>(homeRepoImpl(get_it.get<ApiService>()));
-  get_it.registerSingleton<ApiService>(ApiService(Dio()));
+  getIt.registerSingleton<ApiService>(ApiService(Dio()));
+  getIt.registerSingleton<homeRepoImpl>(homeRepoImpl(getIt.get<ApiService>()));
 }
