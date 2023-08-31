@@ -13,7 +13,8 @@ class searchResultView extends StatelessWidget {
         shrinkWrap: true,
         itemBuilder: ((context, index) => const Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
-              child: BestSellerListViewItem(),
+              child: Text('data'),
+              // child: BestSellerListViewItem(bookModle:,),
             )),
         itemCount: 15);
   }

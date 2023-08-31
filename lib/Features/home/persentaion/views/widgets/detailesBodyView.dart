@@ -41,7 +41,9 @@ class detailesVeiwBody extends StatelessWidget {
           const SizedBox(
             height: 7,
           ),
-          const BookRating(
+         BookRating(
+            rating: 4.4,
+count: 455,
             mainAxisAlignment: MainAxisAlignment.center,
           ),
           const SizedBox(

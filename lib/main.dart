@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             ..fetchFeatureBooks()),
         ),
         BlocProvider(
-          create: ((context) => NewsetBooksCubit(getIt.get<homeRepoImpl>())),
+          create: ((context) => NewsetBooksCubit(getIt.get<homeRepoImpl>())..fetchNewsetBooks()),
         ),
       ],
       child: MaterialApp.router(

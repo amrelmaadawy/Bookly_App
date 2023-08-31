@@ -24,7 +24,7 @@ class featureListViewBuilder extends StatelessWidget {
                 itemBuilder: ((context, index) => Padding(
                       padding:const EdgeInsets.symmetric(horizontal: 8),
                       child: customItemListView(
-                          imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail,),
+                          imageUrl: state.books[index].volumeInfo.imageLinks!.thumbnail,),
                     ))),
           );
         } else if (state is FeaturedBooksFailure) {
