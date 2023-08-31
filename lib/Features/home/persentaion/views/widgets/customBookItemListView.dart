@@ -1,4 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class customItemListView extends StatelessWidget {
   const customItemListView({Key? key, required this.imageUrl})
@@ -6,14 +8,13 @@ class customItemListView extends StatelessWidget {
   final String imageUrl;
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 2.7 / 4,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          image:  DecorationImage(
-              image: NetworkImage(imageUrl), fit: BoxFit.fill),
-        ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16),
+      child: AspectRatio(
+        aspectRatio: 2.7 / 4,
+        child: CachedNetworkImage(imageUrl: imageUrl,fit: BoxFit.fill,
+        errorWidget: (context, url, error) =>  const Icon(Icons.error),
+        )
       ),
     );
   }
