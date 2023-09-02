@@ -11,11 +11,11 @@ class customItemListView extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
       child: AspectRatio(
-        aspectRatio: 2.7 / 4,
-        child: CachedNetworkImage(imageUrl: imageUrl,fit: BoxFit.fill,
-        errorWidget: (context, url, error) =>  const Icon(Icons.error),
-        )
-      ),
+          aspectRatio: 2.7 / 4,
+          child: CachedNetworkImage(
+            imageUrl: imageUrl,
+            fit: BoxFit.fill,
+          )),
     );
   }
 }

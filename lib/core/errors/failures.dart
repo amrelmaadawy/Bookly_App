@@ -6,8 +6,9 @@ abstract class failure {
 }
 
 class serverFailure extends failure {
+  // doesnot Handeled (it didnot work )check it later!!!!
   serverFailure(super.errmessage);
-  factory serverFailure.fromDioError(DioError dioError) {
+  factory serverFailure.fromDioError(DioException dioError) {
     switch (dioError.type) {
       case DioExceptionType.connectionTimeout:
         return serverFailure('Connection timeout with api server');
@@ -42,6 +43,8 @@ class serverFailure extends failure {
       return serverFailure('your request not found ,try later!');
     } else if (statusCode == 500) {
       return serverFailure('Internal Server error, Please try later');
+    } else if (statusCode == 429) {
+      return serverFailure('you complete your Queries per da ');
     } else {
       return serverFailure('Opps There was an Error, Please try again');
     }

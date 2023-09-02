@@ -12,17 +12,16 @@ class homeRepoImpl implements HomeRepo {
   Future<Either<failure, List<BookModle>>> fetchBestSellerBooks() async {
     try {
       var data = await apiService.get(
-          endPoint:
-              'volumes?Sortling=newest&q=programming&filtering=free-ebooks');
+          endPoint: 'volumes?Sorting=newset&q=عمرو عبدالحميد&filtering=free-ebooks');
       List<BookModle> books = [];
       for (var item in data['items']) {
         books.add(BookModle.fromJson(item));
       }
       return right(books);
-    } on Exception catch (e) {
-      if (e is DioError) {
+    } catch (e) {
+      if (e is DioException) {
         return left(serverFailure.fromDioError(e));
-      }
+      } 
       return left(serverFailure(e.toString()));
     }
   }
@@ -31,14 +30,32 @@ class homeRepoImpl implements HomeRepo {
   Future<Either<failure, List<BookModle>>> fetchFeatureBooks() async {
     try {
       var data = await apiService.get(
-          endPoint: 'volumes?q=programming&filtering=free-ebooks');
+          endPoint: 'volumes?q=عصير الكتب&filtering=free-ebooks');
       List<BookModle> books = [];
       for (var item in data['items']) {
         books.add(BookModle.fromJson(item));
       }
       return right(books);
-    } on Exception catch (e) {
-      if (e is DioError) {
+    } catch (e) {
+      if (e is DioException) {
+        return left(serverFailure.fromDioError(e));
+      }
+      return left(serverFailure(e.toString()));
+    }
+  }
+  
+  @override
+  Future<Either<failure, List<BookModle>>> fetchSimilarBooks({required String category})async {
+  try {
+      var data = await apiService.get(
+          endPoint: 'volumes?Filtering=free-ebooks&q=دون&sorting=relevance');
+      List<BookModle> books = [];
+      for (var item in data['items']) {
+        books.add(BookModle.fromJson(item));
+      }
+      return right(books);
+    } catch (e) {
+      if (e is DioException) {
         return left(serverFailure.fromDioError(e));
       }
       return left(serverFailure(e.toString()));
