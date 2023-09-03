@@ -57,7 +57,7 @@ class detailesVeiwBody extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const BooksAction(),
+             BooksAction(bookModle:bookModle ,),
             const SizedBox(
               height: 30,
             ),
