@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/data/model/book_modle/book_modle.dart';
 import 'package:flutter/cupertino.dart';
 import 'BestSellerListView.dart';
 import 'customAppBar.dart';
@@ -5,7 +6,6 @@ import 'listViewBuilder.dart';
 
 class home_View_Body extends StatelessWidget {
   const home_View_Body({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(

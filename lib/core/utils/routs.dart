@@ -14,7 +14,6 @@ abstract class routs {
   static const khomeView = '/homeView';
   static const kDetailesView = '/DetailesView';
   static const kSearchView = '/searchView';
-
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -34,9 +33,10 @@ abstract class routs {
           )),
       ),
       GoRoute(
-        path: '/searchView',
-        builder: (context, state) => const searchView(),
-      ),
-    ],
+        path: kSearchView,
+        builder: (context, state) =>   searchView( 
+         
+        ))
+    ]
   );
 }

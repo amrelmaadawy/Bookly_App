@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// ignore: must_be_immutable
 class customSearchField extends StatelessWidget {
-  const customSearchField({super.key});
-
+   customSearchField({super.key, required this.onChange});
+ final ValueChanged<String> onChange;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onChanged:onChange,
       decoration: InputDecoration(
           hintText: 'search',
           enabledBorder: outLineBorder(),

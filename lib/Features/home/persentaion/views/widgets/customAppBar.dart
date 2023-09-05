@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/data/model/book_modle/book_modle.dart';
 import 'package:bookly_app/core/utils/routs.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -5,7 +6,6 @@ import 'package:go_router/go_router.dart';
 
 class customAppBar extends StatelessWidget {
   const customAppBar({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,7 +19,7 @@ class customAppBar extends StatelessWidget {
           const Spacer(),
           IconButton(
               onPressed: () {
-                GoRouter.of(context).push(routs.kSearchView);
+                GoRouter.of(context).push(routs.kSearchView );
               },
               icon: const Icon(FontAwesomeIcons.magnifyingGlass))
         ],
